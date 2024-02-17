@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "sort.h"
-
 /**
- * insertion_sort_list - a function that sorts a doubly linked list using
- * the insertion sort method
- * @list: a double pointer to the doubly linked list
+ * swap_nodes - a function that swap nodes
+ * @h: pointer pointer to the list
+ * @n1: pointer pointter to the first node
+ * @n2: pointer to the second node
  *
  * Return: void
  */
-
 void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
 {
 	(*n1)->next = n2->next;
@@ -24,6 +23,13 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
 	(*n1)->prev = n2;
 	*n1 = n2->prev;
 }
+/**
+ * insertion_sort_list - a function that sorts a doubly linked list using
+ * the insertion sort method
+ * @list: a double pointer to the doubly linked list
+ *
+ * Return: void
+ */
 
 void insertion_sort_list(listint_t **list)
 {
