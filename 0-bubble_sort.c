@@ -15,8 +15,9 @@ void bubble_sort(int *array, size_t size)
 {
 	int temp;
 	size_t i, o;
+	int check = 0;
 
-	if (!array || size <= 0)
+	if (!array || size < 2)
 	{
 		return;
 	}
@@ -31,8 +32,13 @@ void bubble_sort(int *array, size_t size)
 				array[o] = array[o + 1];
 				array[o + 1] = temp;
 				print_array(array, size);
+				check += 1;
 			}
 
+		}
+		if (check == 0)
+		{
+			break;
 		}
 	}
 }
