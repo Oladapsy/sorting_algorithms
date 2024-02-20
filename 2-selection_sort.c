@@ -22,7 +22,7 @@ void swap_int(int *a, int *b)
  * order using selection sort algorithm
  *
  * @array: the array to sort from
- * @size of the array i guess
+ * @size: of the array i guess
  *
  * Return: nothing
  */
@@ -50,7 +50,7 @@ void selection_sort(int *array, size_t size)
 		{
 			swap_int(array + i, min);
 			print_array(array, size);
-		}	
+		}
 
 	}
 }
